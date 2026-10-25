@@ -1,5 +1,8 @@
 # 提问图谱（dsh-ask-graph）
 
+[![Release](https://img.shields.io/github/v/release/tonyischen/ds_ask_graph?display_name=release)](https://github.com/tonyischen/ds_ask_graph/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 把 DeepSeek Harness（DSH）工作区里的会话历史整理成可下钻的**专题图 / 问题图**。
 
 ## 功能
@@ -17,8 +20,14 @@
 ## 环境
 
 - DSH `0.2.1` 系列（Web / Desktop 客户端）。
-- 插件是 Client 插件；数据保存在浏览器 `localStorage`，按工作区隔离。
-- 智能整理会把问题与回复发送给当前配置的 DSH 模型；其余功能本地运行。
+- 插件是 Client 插件；图谱状态保存在浏览器 `localStorage`，按工作区隔离。
+
+## 数据与权限
+
+- 读取当前工作区中 DSH 会话的问题、回复和图片附件，用于归类与展示。
+- 「智能整理」会把待整理的问题与回复发送给当前配置的 DSH 模型；不调用其他外部服务。
+- 导出只写浏览器下载文件（HTML/SVG/ZIP）；插件不向第三方上传数据。
+- 图片无法读取时会在导出结果中保留原链接或给出警告。
 
 ## 开发
 
@@ -53,13 +62,17 @@ dsh plugin --profile web add file:D:\DSH\ds_ask_graph
 
 开发调试时也可以使用 DSH 插件管理器的 `install_bundle`（目录路径）或 profile 的 `link:` 依赖。
 
-### npm（后续）
+### npm（尚未发布）
 
 发布到 npm 后可直接：
 
 ```bash
 dsh plugin --profile web add dsh-ask-graph
 ```
+
+## 许可
+
+MIT，见 [LICENSE](LICENSE)。
 
 
 ## 目录

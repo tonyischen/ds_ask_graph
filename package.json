@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "author": "tonyischen",
   "description": "提问图谱：把 DSH 会话历史整理成可下钻的专题图与对话节点图",
   "repository": {
     "type": "git",
@@ -38,11 +39,15 @@
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test \"tests/*.test.mjs\""
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "dsh": {
     "bundle": {

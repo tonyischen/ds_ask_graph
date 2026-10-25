@@ -33,13 +33,34 @@ node scripts/smoke.mjs
 
 ## 安装
 
-在 DSH 插件管理器中安装本包，或：
+### 团队安装（推荐）
+
+从 GitHub Release 下载 `dsh-ask-graph-1.0.0.tgz`，然后安装到你的 DSH profile：
+
+```bash
+dsh plugin --profile web add ./dsh-ask-graph-1.0.0.tgz
+```
+
+Desktop 版把 `web` 换成 `desktop`（或你实际使用的 profile 名）。安装后重启 DSH。
+
+包内已包含预构建的 `dist/client.js`，团队机器不需要安装 Node 依赖或执行构建。
+
+### 从源码目录安装
+
+```bash
+dsh plugin --profile web add file:D:\DSH\ds_ask_graph
+```
+
+开发调试时也可以使用 DSH 插件管理器的 `install_bundle`（目录路径）或 profile 的 `link:` 依赖。
+
+### npm（后续）
+
+发布到 npm 后可直接：
 
 ```bash
 dsh plugin --profile web add dsh-ask-graph
 ```
 
-从本地源码调试时，可使用插件管理器的 `install_bundle`（目录路径）或 profile 的 `link:` 依赖。
 
 ## 目录
 

@@ -54,6 +54,12 @@ Desktop 版把 `web` 换成 `desktop`（或你实际使用的 profile 名）。�
 
 包内已包含预构建的 `dist/client.js`，团队机器不需要安装 Node 依赖或执行构建。
 
+也可以直接从公开仓库的 tag 安装：
+
+```bash
+dsh plugin --profile web add github:tonyischen/ds_ask_graph#v1.0.0
+```
+
 ### 从源码目录安装
 
 ```bash

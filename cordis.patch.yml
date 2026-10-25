@@ -1,0 +1,5 @@
+# Installs this package as one Host plugin row. Its Client half
+# (dist/client.js) is loaded by the Web module loader.
+- insert:
+    - id: ask-graph
+      name: dsh-ask-graph

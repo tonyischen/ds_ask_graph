@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Ask Graph",
+    "description": "Turns the current workspace's session history into a topic graph with drill-down dialog nodes and DSH replies."
+  }
+}

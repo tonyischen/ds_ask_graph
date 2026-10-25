@@ -76,6 +76,26 @@ dsh plugin --profile web add file:D:\DSH\ds_ask_graph
 dsh plugin --profile web add dsh-ask-graph
 ```
 
+## 发布（维护者）
+
+项目 `.npmrc` 已指向 npm 官方 registry；发布前会自动执行 `build` 和 `test`。
+
+首次发布：
+
+```bash
+npm login
+npm whoami
+npm publish
+```
+
+如果 npm 账号启用了 2FA，按提示输入 OTP。发布后可用：
+
+```bash
+npm view dsh-ask-graph version
+```
+
+自动发布：在 GitHub 仓库 Secrets 中添加 `NPM_TOKEN`，然后推送 `v*` tag，工作流 `.github/workflows/release.yml` 会构建、测试并发布。
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
